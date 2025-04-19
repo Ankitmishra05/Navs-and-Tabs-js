@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.title {
+
+    margin: 20px auto;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: color-mix(in srgb, #4154f1, transparent 90%);
+    color: #4154f1;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.title p {
+    color: #012970;
+    margin: 10px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Nunito", sans-serif;
+}
+
+
+.button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button ul {
+    display: flex;
+}
+
+.button ul li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 10px;
+    line-height: 1;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.btn {
+    color: #4154f1;
+}
+
+.button ul li:hover {
+    color: #4154f1;
+}
+
+
+
+.mainimg {
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.child {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.img img {
+    width: 100%;
+}
+
+
+.child {
+    position: relative;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.child:hover .text1 {
+    opacity: 1;
+}
+
+
+.child .img img {
+    transition: transform 0.3s ease;
+}
+
+
+.child:hover .img img {
+    transform: scale(1.2);
+}
+
+.text1 h4 {
+    position: absolute;
+    top: 10px;
+    right: 60%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: #4154f1;
+}
+
+.text1 p {
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    font-size: 16px;
+}
+
+.text1 .a1 {
+    position: relative;
+    left: 10%;
+    z-index: 1;
+    font-size: 30px;
+}
+
+.text1 .a2 {
+
+    position: relative;
+    bottom: 17%;
+    right: 10%;
+    z-index: 1;
+    font-size: 30px;
+
+}
+
+.child a {
+    color: aliceblue;
+    transition: 0.3s;
+}
+
+.child a:hover {
+    color: #4154f1;
+
+}
+
+
+
+/* .main{
+    display: none;
+} */
+
+.ki {
+    display: none;
+}
+
+
+#modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.836);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(100%);
+    z-index: 1000;
+    
+}
+
+.main {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+}
+
+.main img {
+    width: 100%;
+    height: 600px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;  
+}
+
+.left {
+    left: -200px; 
+}
+
+.right {
+    right: -200px; 
+}
+
+#close1 {
+    position: absolute;
+    top: -10px;
+    right: -200px;
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;  
+}
+#modal button{
+
+    font-size: 20px;
+    padding: 5px 15px;
+    border: none;
+    background-color: #4154f1;
+    color: black;
+    border-radius:50px ;
+  
+}
+
+#modal button:hover{
+    background-color: black;
+    color: darkgreen;
+}
+
+
+
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+
+    .title h2 {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .title p {
+        font-size: 24px;
+    }
+
+    .button ul li {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    .mainimg {
+        padding: 0 10px;
+    }
+
+    .child {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .img {
+        height: 150px;
+    }
+
+    .text1 h4 {
+        font-size: 16px;
+        padding: 3px 10px;
+    }
+
+    .text1 p {
+        font-size: 14px;
+    }
+
+    .text1 .a1, .text1 .a2 {
+        font-size: 25px;
+    }
+
+    /* #modal {
+        width: 90%;
+        height: 90%;
+    } */
+
+    /* .main {
+        width: 90%;
+        height: auto;
+    } */
+
+    #close1 {
+        margin-left: 40%;
+        font-size: 30px;
+    }
+
+    #modal button {
+        font-size: 16px;
+        padding: 4px 10px;
+    }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+
+    .title h2 {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+
+    .title p {
+        font-size: 28px;
+    }
+
+    .button ul li {
+        font-size: 17px;
+        margin: 0 8px;
+    }
+
+    .mainimg {
+        padding: 0 40px;
+    }
+
+    .child {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .img {
+        height: 180px;
+    }
+
+    .text1 h4 {
+        font-size: 18px;
+        padding: 4px 12px;
+    }
+
+    .text1 p {
+        font-size: 15px;
+    }
+
+    .text1 .a1, .text1 .a2 {
+        font-size: 28px;
+    }
+
+    /* #modal {
+        width: 80%;
+        height: 80%;
+    } */
+
+    /* .main {
+        width: 80%;
+        height: auto;
+    } */
+
+    #close1 {
+        margin-left: 42%;
+        font-size: 32px;
+    }
+
+    #modal button {
+        font-size: 18px;
+        padding: 5px 12px;
+    }
+}
+
